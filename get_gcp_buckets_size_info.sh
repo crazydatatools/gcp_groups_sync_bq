@@ -12,7 +12,7 @@ if [ -f "$OUTPUT_FILE" ]; then
     echo "$OUTPUT_FILE exists."
    rm -f  $OUTPUT_FILE
 fi
-#declare -a projectsArray=("gpcadmin" "dev-gold-core")
+
 printf "\nProcessing Started------------\n" 
 for project in  $(gcloud beta billing projects list  --billing-account=$BILLING_ACC_ID --format="value(projectId)")
 #for project in  ${projectsArray[@]};
